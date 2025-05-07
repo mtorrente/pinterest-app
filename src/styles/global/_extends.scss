@@ -1,0 +1,24 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+%buttonBox {
+    cursor: pointer;
+    border: none;
+    font-size: 15px;
+    border-radius: 25px;
+    background-color: $primary-color;
+    padding: $primary-padding;
+}
+
+%inputBox{
+    border: none;
+    border-radius: 25px;
+    padding: 12px 12px 12px 36px;
+    background-color: $bg-color;
+    cursor: text;
+    &:focus {
+        outline: none;
+        border: 1px solid #555;
+        box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+    }
+}

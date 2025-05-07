@@ -1,0 +1,13 @@
+@use "./global/extends" as *;
+@use "./global/mixins" as *;
+@use "./global/variables" as *;
+@use "./components/button" as *;
+@use "./components/input" as *;
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+

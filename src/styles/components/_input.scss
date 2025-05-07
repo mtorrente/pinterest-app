@@ -1,0 +1,25 @@
+@use "/src/styles/global/variables" as *;
+@use "/src/styles/global/extends" as *;
+@use "/src/styles/global/mixins" as *;
+
+.input-wrapper {
+    position: relative;
+    width: 900px;
+  }
+
+
+.input-wrapper input {
+    width: 100%;
+    @extend %inputBox;
+  }
+
+.search-icon {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    
+  }

@@ -1,0 +1,14 @@
+
+@use "/src/styles/global/variables" as *;
+@use "/src/styles/global/extends" as *;
+@use "/src/styles/global/mixins" as *;
+
+.navlink > a {
+    font-size: 22px;
+    color: $secondary-color;
+    font-weight: bold;
+
+    :hover {
+        border-bottom: 2px solid $secondary-color;
+    }
+}

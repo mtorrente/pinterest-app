@@ -1,0 +1,42 @@
+@use "/src/styles/global/variables" as *;
+@use "/src/styles/global/extends" as *;
+@use "/src/styles/global/mixins" as *;
+
+header {
+    height: 10svh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+    padding: 10px;
+    margin: 5px;
+
+    img {
+        width: 35px;
+        height: auto;
+        cursor: pointer;
+    }
+
+    ul {
+        display: flex;
+        gap: 5px;
+        list-style: none;
+
+        a {
+            text-decoration: none;;
+        }
+    }
+  }
+
+  .bell-icon {
+    color: gray;
+    font-size: 25px;
+    cursor: pointer;
+  }
+
+  .chat-icon {
+    color: gray;
+    font-size: 25px;
+    cursor: pointer;
+  }
