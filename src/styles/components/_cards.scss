@@ -1,3 +1,79 @@
 @import "../../styles/global/variables";
 @import "../../styles/global/extends";
 @import "../../styles/global/mixins";
+
+.card-container {
+    position: relative;
+    width: 250px;
+    height: 550px;
+
+    .card-image {
+        width: 100%;
+        height: 85%;
+        object-fit: cover;
+        border-radius: 25px;
+    }
+
+    .likes {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        line-height: 1;
+        background-color: $bg-color;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        font-size: 12px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .photos-count {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        line-height: 1;
+        background-color: $bg-color;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        font-size: 12px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    &:hover {
+        
+        .card-image {
+            filter: brightness(0.7);
+        }
+        .likes {
+            pointer-events: none;
+            opacity: 1;
+        }
+        .photos-count {
+            pointer-events: none;
+            opacity: 1;
+        }
+        .visit-button {
+            opacity: 1;
+        }
+    }
+}
+
+.image-owner {
+    text-align: center;
+}
+
+
+

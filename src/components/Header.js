@@ -2,6 +2,7 @@ import "../styles/main.scss";
 import { navLinks } from "../data/navLinks";
 import { NavLink } from "./NavLink";
 import { fetchApi } from "../utils/fetchApi";
+import { printImages } from "../utils/printImages";
 
 export const Header = () => {
     const header = document.createElement("header");
@@ -46,7 +47,8 @@ export const Header = () => {
 
     input.addEventListener("keydown", async (e) => {
         if (e.key === "Enter") {
-            await fetchApi(e.target.value);
+            await printImages(e.target.value);
+            e.target.value = "";
             
             
         }
