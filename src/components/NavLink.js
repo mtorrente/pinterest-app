@@ -1,4 +1,4 @@
-import "./NavLink.scss";
+import "../styles/main.scss";
 
 export const NavLink = ({path, text, id}) => {
     const li = document.createElement("li");

@@ -5,7 +5,7 @@ export const navLinks = [
         id: "1"
     },
     {
-        path: "/explorer",
+        path: "/explore",
         text: "Explore",
         id: "2"
     },

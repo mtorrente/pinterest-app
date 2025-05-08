@@ -1,8 +1,13 @@
-@use "./global/extends" as *;
-@use "./global/mixins" as *;
-@use "./global/variables" as *;
-@use "./components/button" as *;
-@use "./components/input" as *;
+@import "./global/extends";
+@import "./global/mixins";
+@import "./global/variables";
+@import "./components/button";
+@import "./components/input";
+@import "./components/header";
+@import "./components/navLinks";
+@import "./components/cards";
+@import "./components/home";
+
 
 
 *{

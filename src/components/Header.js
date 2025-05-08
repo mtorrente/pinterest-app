@@ -1,7 +1,7 @@
-import "./Header.scss";
-import { navLinks } from "../../data/navLinks";
-import { NavLink } from "../NavLinks/NavLink";
-import { fetchApi } from "../../utils/fetchApi";
+import "../styles/main.scss";
+import { navLinks } from "../data/navLinks";
+import { NavLink } from "./NavLink";
+import { fetchApi } from "../utils/fetchApi";
 
 export const Header = () => {
     const header = document.createElement("header");
@@ -46,7 +46,7 @@ export const Header = () => {
 
     input.addEventListener("keydown", async (e) => {
         if (e.key === "Enter") {
-            const result = await fetchApi(e.target.value);
+            await fetchApi(e.target.value);
             
             
         }

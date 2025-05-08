@@ -1,7 +1,7 @@
 
-@use "/src/styles/global/variables" as *;
-@use "/src/styles/global/extends" as *;
-@use "/src/styles/global/mixins" as *;
+@import "/src/styles/global/variables";
+@import "/src/styles/global/extends";
+@import "/src/styles/global/mixins";
 
 .navlink > a {
     font-size: 22px;
