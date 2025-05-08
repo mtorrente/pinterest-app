@@ -4,7 +4,7 @@ const API_KEY = "vlgJ9oqFteWlvpQB4T5F8Au5VKvP3KYV4DXkmZ1X1Q0";
 
 const url = "https://api.unsplash.com/search/photos";
 
-export const fetchApi = async (query = "Gatos") => {
+export const fetchApi = async (query = "epic") => {
     try {
         const response = await fetch (`${url}/?query=${query}&per_page=20&client_id=${API_KEY}`);
         

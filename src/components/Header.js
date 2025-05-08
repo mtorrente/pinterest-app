@@ -53,4 +53,8 @@ export const Header = () => {
             
         }
     })
+
+    logo.addEventListener("click", async () => {
+        printImages();
+    })
 }
