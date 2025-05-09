@@ -1,5 +1,5 @@
 import "../styles/main.scss";
-
+import { Modal } from "./Modal";
 
 export const Cards = (imageData) => {
     const cardContainer = document.createElement("li");
@@ -15,12 +15,12 @@ export const Cards = (imageData) => {
 
     const likes = document.createElement("p");
     likes.classList.add("likes");
-    likes.textContent = `♥️ \n ${imageData.likes}`;
+    likes.innerHTML = `<img src="/src/assets/heart.png" alt="heart icon" style="width:17px"> ${imageData.likes}`;
     likes.style.whiteSpace = "pre-line";
 
     const photosCount = document.createElement("p");
     photosCount.classList.add("photos-count");
-    photosCount.textContent = `📷 \n ${imageData.user.total_promoted_photos}`;
+    photosCount.innerHTML = `<img src="/src/assets/photo-camera.png" alt="camera icon" style="width:17px"> ${imageData.user.total_photos}`;
     photosCount.style.whiteSpace = "pre-line";
 
     const visitButton = document.createElement("button");
@@ -28,6 +28,15 @@ export const Cards = (imageData) => {
     visitButton.textContent = "Explore";
 
     cardContainer.append(image, imageOwner, likes, photosCount, visitButton);
+
+    // visitButton.addEventListener("click", () => {
+    //     const modalContainer = document.querySelector(".modal-container");
+    //     const modalImage = document.querySelector(".modal-image");
+    //     modalContainer.classList.remove("hidden");
+    //     modalImage.src = imageData.urls.small;
+    // })
+
+    
 
     return cardContainer;
 

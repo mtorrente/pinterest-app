@@ -28,7 +28,7 @@
         width: 35px;
         height: 35px;
         border-radius: 50%;
-        font-size: 12px;
+        font-size: 10px;
         opacity: 0;
         transition: opacity 0.3s ease;
     }
@@ -67,6 +67,11 @@
         }
         .visit-button {
             opacity: 1;
+            transition: opacity 0.3s, transform 0.3s;
+            &:hover {
+                opacity: 0.85;
+                transform: scale(1.1);
+            }
         }
     }
 }

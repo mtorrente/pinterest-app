@@ -4,11 +4,17 @@ import { Cards } from "./src/components/Cards";
 import { fetchApi } from "./src/utils/fetchApi";
 import { Home } from "./src/components/Home";
 import { printImages } from "./src/utils/printImages";
+import { Modal } from "./src/components/Modal";
 
+Modal();
 Header();
 Home();
 
 document.addEventListener("DOMContentLoaded", () => {
     printImages()
 })
+
+
+
+
 
