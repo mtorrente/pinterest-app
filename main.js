@@ -6,7 +6,6 @@ import { Home } from "./src/components/Home";
 import { printImages } from "./src/utils/printImages";
 import { Modal } from "./src/components/Modal";
 
-Modal();
 Header();
 Home();
 

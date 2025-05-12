@@ -11,3 +11,16 @@ export const NavLink = ({path, text, id}) => {
     li.append(button);
     return li;
 }
+
+export const MenuNavLink = ({path, text, id}) => {
+    const li = document.createElement("li");
+
+    li.classList.add(`menu-navlink${id}`);
+    li.href = path;
+    li.textContent = text;
+
+
+
+    return li;
+}
+

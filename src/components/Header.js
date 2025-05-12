@@ -1,6 +1,6 @@
 import "../styles/main.scss";
-import { navLinks } from "../data/navLinks";
-import { NavLink } from "./NavLink";
+import { menuNavLinks, navLinks } from "../data/navLinks";
+import { NavLink, MenuNavLink } from "./NavLink";
 import { fetchApi } from "../utils/fetchApi";
 import { printImages } from "../utils/printImages";
 
@@ -40,7 +40,27 @@ export const Header = () => {
     profileIcon.className = "profile-button";
     profileIcon.innerText = "M";
 
-    header.append(logo, nav, inputWrapper, bellIcon, chatIcon, profileIcon);
+    // const menuIcon = document.createElement("img");
+    // menuIcon.src = "/src/assets/3-lines-menu.webp";
+    // menuIcon.alt = "Menu";
+    // menuIcon.classList.add("menu-icon");
+    const menuIcon = document.createElement("div");
+    menuIcon.classList.add("menu-icon");
+    const menuLine1 = document.createElement("span");
+    const menuLine2 = document.createElement("span");
+    const menuLine3 = document.createElement("span");
+
+    menuIcon.append(menuLine1, menuLine2, menuLine3);
+
+    const screenMenu = document.createElement("div");
+    screenMenu.classList.add("screen-menu");
+    const screenMenuUl = document.createElement("ul");
+    screenMenuUl.classList.add("menu-ul");
+    
+    menuNavLinks.forEach((menuNavLink) => screenMenuUl.append(MenuNavLink(menuNavLink)));
+    screenMenu.append(screenMenuUl);
+
+    header.append(logo, nav, inputWrapper, bellIcon, chatIcon, profileIcon, menuIcon, screenMenu);
     nav.append(ul);
     app.append(header);
 
@@ -57,4 +77,21 @@ export const Header = () => {
     logo.addEventListener("click", async () => {
         printImages();
     })
+
+    const homeButton = document.querySelector(".navlink1");
+
+    homeButton.addEventListener("click", async () => {
+        printImages();
+    })
+
+    menuIcon.addEventListener("click", () => {
+        menuIcon.classList.toggle("active");
+        screenMenu.classList.toggle("active");
+    })
+
+    // menuIcon.addEventListener("click", () => {
+    //     const nav = document.querySelector("nav");
+    //     nav.classList.toggle("hidden");
+    // })
+
 }

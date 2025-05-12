@@ -40,3 +40,98 @@ header {
     font-size: 25px;
     cursor: pointer;
   }
+
+  .menu-icon {
+    height: 40px;
+    min-width: 35px;
+    position: relative;
+    cursor: pointer;
+    display: none;
+    margin-right: 10px;
+
+    span {
+      height: 5px;
+      width: 100%;
+      background-color: $tertiary-color;
+      border-radius: 25px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: .3s ease;
+
+      &:nth-child(1) {
+        top: 25%;
+      }
+      &:nth-child(3) {
+        top: 75%;
+      }
+    }
+  }
+
+  .menu-icon.active span:nth-child(1) {
+    top: 60%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    z-index: 2;
+  }
+  .menu-icon.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-icon.active span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, 50%) rotate(-45deg);
+    z-index: 2;
+  }
+
+ 
+
+  .screen-menu {
+    background-color: $secondary-color;
+    color: $primary-color;
+    height: 100svh;
+    width: 100%;
+    max-width: 250px;
+    position: fixed;
+    top: 0;
+    right: -450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+    font-size: 10px;
+    transition: .3s ease;
+    padding-top: 100px;
+    z-index: 1;
+
+    .menu-ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      gap: 30px;
+
+      li {
+        font-size: x-large;
+        cursor: pointer;
+      }
+    }
+    
+  }
+
+  .screen-menu.active {
+    right: 0;
+    z-index: 1;
+  }
+
+ 
+
+  @media screen and (max-width: 768px) {
+    .profile-button, .bell-icon, .chat-icon, nav {
+        display: none;
+    }
+    .menu-icon {
+        display: block;
+    }
+  }

@@ -6,6 +6,7 @@
     position: relative;
     width: 250px;
     height: 550px;
+    margin: 10px;
 
     .card-image {
         width: 100%;
@@ -76,7 +77,7 @@
     }
 }
 
-.image-owner {
+.image-owner, .date {
     text-align: center;
 }
 

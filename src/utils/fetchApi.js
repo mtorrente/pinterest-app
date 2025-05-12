@@ -8,12 +8,17 @@ export const fetchApi = async (query = "epic") => {
     const randomPage = Math.floor(Math.random() * 10) + 1;
     try {
         const response = await fetch (`${url}/?query=${query}&page=${randomPage}&per_page=30&client_id=${API_KEY}`);
+
+        console.log(response);
+        
         
         const res = await response.json();
+        console.log(res);
+        
         if (res.results.length === 0) {
             return [];
         } else {
-            return res.results;
+            return res.results;  
         }        
         
          
