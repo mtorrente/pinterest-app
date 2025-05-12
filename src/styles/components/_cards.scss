@@ -53,6 +53,35 @@
         transition: opacity 0.3s ease;
     }
 
+    .image-owner {
+        position: absolute;
+        bottom: 30px;
+        left: 15px;
+    }
+
+    .date {
+
+        position: absolute;
+        bottom: 10px;
+        left: 15px;
+    }
+    
+    .download-icon {
+        position: absolute;
+        bottom: 20px;
+        right: 15px;
+        cursor: pointer;
+    }
+
+    .profile-picture {
+        position: absolute;
+        bottom: 50px;
+        right: 85px;
+        border-radius: 50%;
+        border: $tertiary-color solid 5px;
+        transition: 0.3s ease;
+    }
+
     &:hover {
         
         .card-image {
@@ -66,6 +95,11 @@
             pointer-events: none;
             opacity: 1;
         }
+        .profile-picture {
+            bottom: 70px;
+            transform: scale(1.2);
+        }
+
         .visit-button {
             opacity: 1;
             transition: opacity 0.3s, transform 0.3s;
@@ -77,9 +111,27 @@
     }
 }
 
-.image-owner, .date {
-    text-align: center;
-}
+@media screen and (max-width: 768px) {
+    .card-container {
+        min-width: 340px;
+        height: 400px;
+
+        .profile-picture {
+            left: 140px;
+        }
+        .visit-button {
+            top: 150px;
+            right: 115px;
+        }
+        &:hover {
+            .profile-picture {
+                bottom: 67px;
+            }
+        }
+    }
+    
+    
+  }
 
 
 

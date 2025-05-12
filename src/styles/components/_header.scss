@@ -73,6 +73,7 @@ header {
     top: 60%;
     transform: translate(-50%, -50%) rotate(45deg);
     z-index: 2;
+    background-color: $primary-color;
   }
   .menu-icon.active span:nth-child(2) {
     opacity: 0;
@@ -81,12 +82,13 @@ header {
     top: 50%;
     transform: translate(-50%, 50%) rotate(-45deg);
     z-index: 2;
+    background-color: $primary-color;
   }
 
  
 
   .screen-menu {
-    background-color: $secondary-color;
+    background-color: rgb(185, 46, 46);
     color: $primary-color;
     height: 100svh;
     width: 100%;
@@ -105,16 +107,24 @@ header {
     z-index: 1;
 
     .menu-ul {
+      width: 100%;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
-      gap: 30px;
+      
 
       li {
+        padding: 25px;
+        width: 100%;
+        list-style: none;
         font-size: x-large;
         cursor: pointer;
+
+        &:hover {
+          background-color: rgba(182, 97, 97, 0.583);
+        }
       }
     }
     

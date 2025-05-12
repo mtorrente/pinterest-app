@@ -40,10 +40,6 @@ export const Header = () => {
     profileIcon.className = "profile-button";
     profileIcon.innerText = "M";
 
-    // const menuIcon = document.createElement("img");
-    // menuIcon.src = "/src/assets/3-lines-menu.webp";
-    // menuIcon.alt = "Menu";
-    // menuIcon.classList.add("menu-icon");
     const menuIcon = document.createElement("div");
     menuIcon.classList.add("menu-icon");
     const menuLine1 = document.createElement("span");
@@ -88,10 +84,5 @@ export const Header = () => {
         menuIcon.classList.toggle("active");
         screenMenu.classList.toggle("active");
     })
-
-    // menuIcon.addEventListener("click", () => {
-    //     const nav = document.querySelector("nav");
-    //     nav.classList.toggle("hidden");
-    // })
 
 }

@@ -16,8 +16,25 @@ export const Cards = (imageData) => {
     const date = document.createElement("p");
     date.classList.add("date");
     const dateAndTime = `${imageData.user.updated_at}`;
-    const dateOnly = dateAndTime.split("T")[0];
-    date.textContent = dateOnly;
+    const dateOnly = new Date(dateAndTime.split("T")[0]);
+    const day = dateOnly.getDate();
+    const month = dateOnly.getMonth() + 1;
+    const year = dateOnly.getFullYear();
+    date.textContent = `${day}/${month}/${year}`;
+
+    const downloadIcon = document.createElement("img");
+    downloadIcon.classList.add("download-icon");
+    downloadIcon.src = "/src/assets/download.png";
+    downloadIcon.alt = "download icon";
+    downloadIcon.style.width = "25px";
+
+    const profilePicture = document.createElement("img");
+    profilePicture.classList.add("profile-picture");
+    profilePicture.src = imageData.user.profile_image.medium;
+    profilePicture.alt = "profile picture";
+    profilePicture.style.width = "70px";
+
+    
 
     const likes = document.createElement("p");
     likes.classList.add("likes");
@@ -33,20 +50,19 @@ export const Cards = (imageData) => {
     visitButton.classList.add("visit-button");
     visitButton.textContent = "Explore";
 
-    cardContainer.append(image, imageOwner, date, likes, photosCount, visitButton);
-
-    // visitButton.addEventListener("click", () => {
-    //     const modalContainer = document.querySelector(".modal-container");
-    //     const modalImage = document.querySelector(".modal-image");
-    //     modalContainer.classList.remove("hidden");
-    //     modalImage.src = imageData.urls.small;
-    // })
+    cardContainer.append(image, imageOwner, date, downloadIcon, profilePicture, likes, photosCount, visitButton);
 
     visitButton.addEventListener("click", (e) => {
         Modal(imageData.urls.regular);
     })
 
-    
+    downloadIcon.addEventListener("click", () => {
+        const link = document.createElement("a");
+        link.href = imageData.urls.regular;
+        document.body.appendChild(link);
+        window.open(link.href, "_blank");
+        document.body.removeChild(link);
+    })
 
     return cardContainer;
 
