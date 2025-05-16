@@ -1,7 +1,5 @@
 @import "../../styles/global/variables";
 @import "../../styles/global/extends";
-@import "../../styles/global/mixins";
-
 
 #lightbox {
     position: fixed;
@@ -15,7 +13,6 @@
     align-items: center;
     overflow: hidden;
     object-fit: cover;
-
 
     button {
         position: absolute;

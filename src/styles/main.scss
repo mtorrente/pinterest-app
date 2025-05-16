@@ -1,5 +1,4 @@
 @import "./global/extends";
-@import "./global/mixins";
 @import "./global/variables";
 @import "./components/button";
 @import "./components/input";
@@ -9,11 +8,15 @@
 @import "./components/home";
 @import "./components/modal";
 
-
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+html, body {
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 

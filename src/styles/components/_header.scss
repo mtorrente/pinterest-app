@@ -1,6 +1,5 @@
 @import "../global/variables";
 @import "../global/extends";
-@import "../global/mixins";
 
 header {
     height: 10svh;
@@ -85,8 +84,6 @@ header {
     background-color: $primary-color;
   }
 
- 
-
   .screen-menu {
     background-color: rgb(185, 46, 46);
     color: $primary-color;
@@ -134,8 +131,6 @@ header {
     right: 0;
     z-index: 1;
   }
-
- 
 
   @media screen and (max-width: 768px) {
     .profile-button, .bell-icon, .chat-icon, nav {

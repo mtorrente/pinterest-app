@@ -1,7 +1,6 @@
 import { Cards } from "../components/Cards";
 import { fetchApi, fetchApiError } from "./fetchApi";
 
-
 export const printImages = async (query) => {
     const images = document.querySelector(".image-container");
 
@@ -10,7 +9,6 @@ export const printImages = async (query) => {
     }
 
     try {
-
         const result = await fetchApi(query);
         const errorResult = await fetchApiError();
 
@@ -34,7 +32,5 @@ export const printImages = async (query) => {
         
     } catch (error) {
         console.log(error);
-        
-        
     }
 }

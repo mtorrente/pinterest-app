@@ -1,12 +1,10 @@
 @import "../global/variables";
 @import "../global/extends";
-@import "../global/mixins";
 
 .input-wrapper {
     position: relative;
     width: 925px;
   }
-
 
 .input-wrapper input {
     width: 100%;
@@ -21,5 +19,4 @@
     top: 50%;
     transform: translateY(-50%);
     pointer-events: none;
-    
   }

@@ -1,5 +1,4 @@
 import "../styles/main.scss";
-import { printImages } from "../utils/printImages";
 
 export const Home = () => {
 
@@ -24,9 +23,7 @@ export const Home = () => {
         scrollContainer.scrollTo({
             top: 0,
             behavior: "smooth"
-
         });
     })
-
 }
 

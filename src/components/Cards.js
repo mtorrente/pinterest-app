@@ -34,8 +34,6 @@ export const Cards = (imageData) => {
     profilePicture.alt = "profile picture";
     profilePicture.style.width = "70px";
 
-    
-
     const likes = document.createElement("p");
     likes.classList.add("likes");
     likes.innerHTML = `<img src="/src/assets/heart.png" alt="heart icon" style="width:17px"> ${imageData.likes}`;
@@ -65,5 +63,4 @@ export const Cards = (imageData) => {
     })
 
     return cardContainer;
-
 }

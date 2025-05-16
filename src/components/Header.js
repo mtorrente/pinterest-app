@@ -1,7 +1,6 @@
 import "../styles/main.scss";
 import { menuNavLinks, navLinks } from "../data/navLinks";
 import { NavLink, MenuNavLink } from "./NavLink";
-import { fetchApi } from "../utils/fetchApi";
 import { printImages } from "../utils/printImages";
 
 export const Header = () => {
@@ -60,13 +59,10 @@ export const Header = () => {
     nav.append(ul);
     app.append(header);
 
-
     input.addEventListener("keydown", async (e) => {
         if (e.key === "Enter") {
             await printImages(e.target.value);
             e.target.value = "";
-            
-            
         }
     })
 
@@ -84,5 +80,4 @@ export const Header = () => {
         menuIcon.classList.toggle("active");
         screenMenu.classList.toggle("active");
     })
-
 }

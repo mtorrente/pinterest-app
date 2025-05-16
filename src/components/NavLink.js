@@ -18,9 +18,7 @@ export const MenuNavLink = ({path, text, id}) => {
     li.classList.add(`menu-navlink${id}`);
     li.href = path;
     li.textContent = text;
-
-
-
+    
     return li;
 }
 
